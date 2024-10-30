@@ -8,6 +8,7 @@ import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import { SummaryComponent } from './dashboard/summary/summary.component';
 import { PrivacyPolicyComponent } from '../shared/privacy-policy/privacy-policy.component';
 import { LegalNoticeComponent } from '../shared/legal-notice/legal-notice.component';
+import { DirectionsComponent } from '../shared/directions/directions.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -21,6 +22,7 @@ export const routes: Routes = [
       { path: 'summary', component: SummaryComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'legal-notice', component: LegalNoticeComponent },
+      { path: 'directions', component: DirectionsComponent },
     ],
   },
   {
@@ -29,6 +31,7 @@ export const routes: Routes = [
     children: [
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'legal-notice', component: LegalNoticeComponent },
+      { path: 'directions', component: DirectionsComponent },
     ],
   },
 ];

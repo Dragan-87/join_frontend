@@ -20,6 +20,17 @@
   gap: 20px;
   width: 100%;
   padding: 0 48px;
+  > span {
+    &:hover {
+      color: $primary-color;
+      transition: all 175ms ease-in-out;
+    }
+
+    &:active {
+      color: darken($color: $primary-color, $amount: 10%);
+      transition: all 175ms ease-in-out;
+    }
+  };
 }
 
 .icon-container {
@@ -35,11 +46,13 @@
 
   &:active {
     color: $white;
-    background-color: darken($color: $primary-color, $amount: 10%);
+    background-color: $primary-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: all 175ms ease-in-out;
     > img {
       filter: invert(1) brightness(2);
-      transition: all 175ms ease-in-out;
+      transition: all 275ms ease-in-out;
+
     }
   }
 }

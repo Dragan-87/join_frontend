@@ -7,6 +7,7 @@
   @include d-flex($justify: space-between);
   width: 100%;
   position: sticky;
+  z-index: 10;
 }
 
 .left-container {
@@ -20,6 +21,11 @@
   @include d-flex($justify: space-between);
   width: 100%;
   max-width: 433px;
+  > img {
+    &:hover {
+      scale: 1.2;
+    }
+  }
 }
 
 .login-user-container {

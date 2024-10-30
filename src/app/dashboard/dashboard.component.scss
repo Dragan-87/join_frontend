@@ -5,6 +5,7 @@
 .content-container {
   position: absolute;
   top: 103.59px;
-  left: 235px;
-
+  left: 232px;
+  width: calc(100% - 232px);
+  height: calc(100% - 103.59px);
 }

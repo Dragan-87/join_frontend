@@ -9,6 +9,7 @@
   <div class="right-container">
     <span>Kanban Project Management Tool</span>
     <img
+      routerLink="/dashboard/directions/"
       class="pointer"
       src="img/default/white_questionmark_icon.png"
       alt="Test"
@@ -26,8 +27,8 @@
           @if(needHelp) {
             <span routerLink="">Help</span>
           }
-          <span routerLink="">Legal Notice</span>
-          <span routerLink="">Privacy Policy</span>
+          <span routerLink="/dashboard/legal-notice/">Legal Notice</span>
+          <span routerLink="/dashboard/privacy-policy">Privacy Policy</span>
           <span routerLink="">Log out</span>
         </div>
       }
