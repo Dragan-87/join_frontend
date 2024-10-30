@@ -28,6 +28,7 @@
   border-radius: 50%;
   background-color: $white;
   @include d-flex($justify: center, $align: center);
+  position: relative;
 }
 
 .initials {
@@ -39,6 +40,55 @@
   border-radius: 50%;
   border: 2px solid $primary-color;
   color: darken($color: $primary-color, $amount: 10%);
+}
+
+.user-menu {
+  @include d-flex($justify: center, $align: center, $direction: column);
+  position: absolute;
+  top: 82px;
+  right: -100%;
+  padding: 10px;
+  min-width: 172px;
+  font-size: 19px;
+  
+  border-radius: 20px 0px 20px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  gap: 8px;
+  color: $gray-1;
+  animation: slide-in 175ms forwards;
   > span {
+    @include d-flex($justify: center, $align: center, $direction: column);
+    border: 20px;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      border-radius: 20px;
+      color: black;
+      background-color: lighten($color: $primary-color, $amount: 30%);
+      transition: all 175ms ease-in-out;
+    }
   }
 }
+
+@keyframes slide-in {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .right-container {
+    @include d-flex($justify: none, $align: center, $direction: row-reverse);
+    > span {
+      display: none;
+    }
+    > img {
+      display: none;
+    }
+  }
+}
+
+

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
 
 
 @Component({
@@ -10,5 +11,17 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  needHelp = false;
+  isProfileMenuActive = false;
+
+
+  toggelProfileMenu() {
+    this.isProfileMenuActive = !this.isProfileMenuActive;
+  }
+
+  closeProfileMenu() {
+    this.isProfileMenuActive = false;
+  }
+
 
 }
