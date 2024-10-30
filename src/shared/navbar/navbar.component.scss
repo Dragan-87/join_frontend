@@ -1,12 +1,43 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 .navbar {
   background-color: $primary-color;
   padding: 20px 39px;
   color: $white;
+  @include d-flex($justify: space-between);
+  width: 100%;
+}
 
+.left-container {
+  img {
+    width: 45px;
+    height: 56px;
+  }
+}
+
+.right-container {
+  @include d-flex($justify: space-between);
+  width: 100%;
+  max-width: 433px;
 }
 
 .login-user-container {
-  
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: $white;
+  @include d-flex($justify: center, $align: center);
+}
+
+.initials {
+  @include d-flex($justify: center, $align: center);
+  width: 50px;
+  height: 50px;
+  font-size: 21px;
+  font-weight: 800;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+  color: darken($color: $primary-color, $amount: 10%);
+  > span {
+  }
 }
