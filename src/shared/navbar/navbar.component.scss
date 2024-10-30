@@ -6,6 +6,7 @@
   color: $white;
   @include d-flex($justify: space-between);
   width: 100%;
+  position: sticky;
 }
 
 .left-container {
@@ -33,8 +34,8 @@
   @include d-flex($justify: center, $align: center);
   width: 50px;
   height: 50px;
-  font-size: 21px;
-  font-weight: 800;
+  font-size: 24px;
+  font-weight: 600;
   border-radius: 50%;
   border: 2px solid $primary-color;
   color: darken($color: $primary-color, $amount: 10%);
