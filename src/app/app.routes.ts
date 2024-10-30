@@ -19,6 +19,8 @@ export const routes: Routes = [
       { path: 'board', component: BoardComponent },
       { path: 'contacts', component: ContactsComponent },
       { path: 'summary', component: SummaryComponent },
+      { path: 'privacy-policy', component: PrivacyPolicyComponent },
+      { path: 'legal-notice', component: LegalNoticeComponent },
     ],
   },
   {

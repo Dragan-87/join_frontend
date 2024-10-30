@@ -43,6 +43,7 @@
 }
 
 .user-menu {
+  z-index: 5;
   @include d-flex($justify: center, $align: center, $direction: column);
   position: absolute;
   top: 82px;
@@ -50,7 +51,7 @@
   padding: 10px;
   min-width: 172px;
   font-size: 19px;
-  
+
   border-radius: 20px 0px 20px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   gap: 8px;
