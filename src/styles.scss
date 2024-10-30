@@ -18,4 +18,45 @@ $user-icon-color-11: #0038FF;
 $user-icon-color-12: #C3FF2B;
 $user-icon-color-13: #FFE62B;
 $user-icon-color-14: #FF4646;
-$user-icon-color-15: #FFBB2B
+$user-icon-color-15: #FFBB2B;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}
+
+
+@mixin button($bg-color:$primary-color, $hover-color:$primary-color, $font-color) {
+  background-color: $bg-color;
+  color: $font-color;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($hover-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($hover-color, 20%);
+  }
+}

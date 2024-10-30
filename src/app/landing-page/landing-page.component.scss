@@ -1,0 +1,6 @@
+@import '../../styles.scss';
+
+.login-btn {
+  @include button($primary-color, $primary-color, $white);
+  
+}
