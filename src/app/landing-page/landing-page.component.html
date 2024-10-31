@@ -16,7 +16,7 @@
           </div>
           <div class="form-group-input">
             <input
-              class="passowrd-icon"
+              class="password-icon"
               type="password"
               formControlName="password"
               placeholder="Password"
@@ -24,19 +24,22 @@
           </div>
           <div class="form-group-checkbox">
             <label>
-              <input type="checkbox" formControlName="rememberMe" />
+              <input class="custom-checkbox" type="checkbox" formControlName="rememberMe" />
               Remember me
             </label>
           </div>
           <div class="form-group-buttons">
-            <button type="submit" class="blue-btn" (click)="login()">
+            <button type="submit" [disabled]="this.loginForm.invalid" class="blue-btn" (click)="login()">
               Log in
             </button>
-            <button class="white-btn-grey-font" type="button">Guest log in</button>
+            <button routerLink="/dashboard/summary/" routerLinkActive="router-link-active"  class="white-btn-grey-font" type="button">Guest log in</button>
           </div>
         </div>
       </form>
     </div>
-    <footer></footer>
+    <footer>
+      <span class="pointer" routerLink="/info/privacy-policy/" routerLinkActive="router-link-active" >Privacy Policy</span>
+      <span class="pointer" routerLink="/info/legal-notice/">Legal Notice</span>
+    </footer>
   </div>
 </div>

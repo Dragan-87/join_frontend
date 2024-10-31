@@ -68,6 +68,11 @@ ul {
     background-color: darken($hover-color, 20%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+  &:disabled {
+    background-color: $gray-1;
+    color: $white;
+    cursor: not-allowed;
+  }
 }
 
 @mixin d-flex($justify: center, $align: center, $direction: row) {

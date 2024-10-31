@@ -30,11 +30,12 @@ nav {
 .login-container {
   @include d-flex($justify: center, $align: center, $direction: column);
   width: 100%;
+  flex-grow: 1;
 }
 
 .login-content {
   @include d-flex($justify: center, $align: center, $direction: column);
-  gap: 16px;
+  gap: 39px;
   max-width: fit-content;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 48px 115px;
@@ -44,21 +45,30 @@ nav {
     line-height: 57, 6px;
     border-bottom: 3px solid $primary-color;
   }
+
+  > form {
+    @include d-flex($justify: center, $align: center, $direction: column);
+  }
 }
 
 .loginForm {
   @include d-flex($justify: center, $align: center, $direction: column);
-  gap: 16px;
+  gap: 32px;
   width: 100%;
 }
 
 .email-icon {
-  input[type="email"] {
-    background-image: url("../../../public/img/default/grey_email_icon.png");
-    background-repeat: no-repeat;
-    background-position: 10px 50%;
-    background-size: 20px;
-  }
+  background-image: url("/img/default/grey_email_icon.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 20px;
+}
+
+.password-icon {
+  background-image: url("/img/default/gery_lock_icon.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 20px;
 }
 
 .form-group-input {
@@ -76,8 +86,28 @@ nav {
     }
   }
 }
+
 .form-group-checkbox {
   align-self: flex-start;
+  input[type="checkbox"] {
+    outline-color: $primary-color;
+    border: 2px solid $primary-color;
+    &:checked {
+      background-color: transparent;
+      &:after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 10px;
+        border: solid $primary-color;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: relative;
+        top: -2px;
+        right: -2px;
+      }
+    }
+  }
 }
 
 .form-group-buttons {
@@ -95,4 +125,26 @@ nav {
     $hover-color: $primary-color,
     $font-color: $gray-1
   );
+  border: 1px solid $gray-1;
+  &:hover {
+    color: $white;
+    border: 1px transparent $primary-color;
+  }
+}
+
+footer {
+  @include d-flex($justify: space-between, $align: center);
+  gap: 20px;
+  flex-grow: 2;
+  justify-self: flex-end;
+  > span {
+    &:hover {
+      color: $primary-color;
+      transition: all 175ms ease-in-out;
+    }
+
+    &:active {
+      color: darken($color: $primary-color, $amount: 10%);
+    }
+  }
 }
