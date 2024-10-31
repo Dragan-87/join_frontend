@@ -1,5 +1,4 @@
-@import '../../styles.scss';
-
+@import "../../styles.scss";
 
 .content-container {
   position: absolute;
@@ -7,6 +6,14 @@
   left: 232px;
   width: calc(100% - 232px);
   height: calc(100% - 103.59px);
+}
+
+.summary-setup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 168px;
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -22,6 +29,5 @@
     position: unset;
     width: 100%;
     height: 100%;
-
   }
 }
