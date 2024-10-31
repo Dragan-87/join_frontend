@@ -1,5 +1,4 @@
-@import '../../../styles.scss';
-
+@import "../../../styles.scss";
 
 .summary-contaienr {
   display: flex;
@@ -8,7 +7,6 @@
   gap: 72px;
   max-width: 912px;
 }
-
 
 h1 {
   font-size: 48px;
@@ -21,8 +19,68 @@ h1 {
   }
 }
 
-.summary{
+.summary {
   @include d-flex($justify: center, $align: center);
   flex-wrap: wrap;
+  gap: 10px;
+}
+
+.urgent {
+  @include d-flex($justify: center, $align: center, $direction: row);
+  gap: 35px;
+  padding: 28px 48px;
+  border-radius: 30px;
+  background-color: $primary-color;
+}
+
+.divider {
+  height: 120px;
+  border-left: 3px solid $white;
+}
+
+.deadline {
+  @include d-flex($justify: flex-start, $align: flex-start, $direction: column);
+  border-radius: 30px;
+  background-color: $primary-color;
+  > .date {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    color: $white;
+  }
+  > .up-deadline {
+    font-size: $font-size-lg;
+    color: $white;
+  }
+}
+
+
+.icon-and-number {
+  @include d-flex($justify: center, $align: center, $direction: row);
+  gap: 20px;
+  width: fit-content;
+  > img {
+    border-radius: 50%;
+    border: 2px solid $white;
+    height: 76px;
+    width: 76px;
+  }
+  > span {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.title {
+  font-size: $font-size-lg;
+  color: $white;
+}
+
+.small-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 30px;
+  background-color: $white;
 
 }
+
+

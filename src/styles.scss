@@ -27,6 +27,23 @@ $tablet-width: 961px;
 $smartphone-width: 430px;
 $max-screen-width: 2560px;
 
+// font-weight
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// font-size
+$font-size-xxs: 12px;
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 19px;
+$font-size-lg: 23px;
+$font-size-xl: 32px;
+$font-size-xxl: 48px;
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -86,3 +103,13 @@ ul {
 .pointer {
   cursor: pointer;
 }
+
+.font-color-white {
+  color: $white;
+}
+
+.font-color-primary {
+  color: $primary-color !important;
+}
+
+
