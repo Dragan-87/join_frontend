@@ -8,4 +8,7 @@ export class CommunicationService {
   constructor() { }
 
   summery = true;
+  addTask = false;
+  board = false;
+  contacts = false;
 }

@@ -1,24 +1,45 @@
 <div class="side-nav-container">
   <div class="top-container">
-    <div routerLink="/dashboard/summary/" routerLinkActive="router-link-active"  class="icon-container pointer">
+    <div
+      (click)="this.isSummaryActive()"
+      routerLink="/dashboard/summary/"
+      routerLinkActive="router-link-active"
+      class="icon-container pointer"
+    >
       <img src="img/default/summary_icon.png" alt="" />
       <span>Summary</span>
     </div>
-    <div routerLink="/dashboard/add-task/" class="icon-container pointer">
+    <div
+      (click)="this.isAddTaskActive()"
+      routerLink="/dashboard/add-task/"
+      class="icon-container pointer"
+    >
       <img src="img/default/add_task_icon.png" alt="" />
       <span>Add Task</span>
     </div>
-    <div routerLink="/dashboard/board/" class="icon-container pointer">
+    <div
+      (click)="this.isBoardActive()"
+      routerLink="/dashboard/board/"
+      class="icon-container pointer"
+    >
       <img src="img/default/board_icon.png" alt="" />
       <span>Board</span>
     </div>
-    <div routerLink="/dashboard/contacts/" class="icon-container pointer">
+    <div
+      (click)="this.isContactsActive()"
+      routerLink="/dashboard/contacts/"
+      class="icon-container pointer"
+    >
       <img src="img/default/contacts_icon.png" alt="" />
       Contacts
     </div>
   </div>
   <div class="bottem-container">
-    <span class="pointer" routerLink="/dashboard/privacy-policy/">Privacy Policy</span>
-    <span class="pointer" routerLink="/dashboard/legal-notice/">Legal Notice</span>
+    <span class="pointer" routerLink="/dashboard/privacy-policy/"
+      >Privacy Policy</span
+    >
+    <span class="pointer" routerLink="/dashboard/legal-notice/"
+      >Legal Notice</span
+    >
   </div>
 </div>

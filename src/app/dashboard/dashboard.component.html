@@ -1,10 +1,17 @@
 <div class="responive-container">
   <app-navbar></app-navbar>
-  <div [ngClass]="
-  {'summary-setup': this.communicationService.summery}
+  <div
+    [ngClass]="
+  {
+    'summary-setup': this.communicationService.summery,
+    'add-task-setup': this.communicationService.addTask,
+    'board-setup': this.communicationService.board,
+    'contacts-setup': this.communicationService.contacts,
+  }
 
   "
-  class="content-container">
+    class="content-container"
+  >
     <router-outlet> </router-outlet>
   </div>
   <app-side-navbar></app-side-navbar>
