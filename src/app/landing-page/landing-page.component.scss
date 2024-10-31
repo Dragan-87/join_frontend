@@ -1,6 +1,76 @@
 @import '../../styles.scss';
 
-.login-btn {
-  @include button($primary-color, $primary-color, $white);
-  
+.wrapper {
+  @include d-flex($justify: unset, $align: center, $direction: column);
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  @include d-flex($justify: space-between, $align: unset);
+  width: 100%;
+  padding: 80px 67px;
+}
+
+.sign-up-container {
+  @include d-flex($justify: flex-end, $align: center);
+  gap: 35px;
+  width: 100%;
+  height: fit-content;
+}
+
+.blue-btn{
+  @include button($bg-color: $primary-color, $hover-color: $primary-color, $font-color: $white);
+}
+
+.login-container {
+  @include d-flex($justify: center, $align: center, $direction: column);
+  width: 100%;
+}
+
+.login-content {
+  @include d-flex($justify: center, $align: center, $direction: column);
+  gap: 16px;
+  max-width: fit-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 48px 115px;
+  border-radius: 30px;
+  > h1 {
+    font-size: 48px;
+    line-height: 57,6px;
+    border-bottom: 3px solid $primary-color;
+  }
+}
+
+.loginForm {
+  @include d-flex($justify: center, $align: center, $direction: column);
+  gap: 16px;
+  width: 100%;
+}
+
+.email-icon {
+  input[type=email] {
+    background-image: url('../../../public/img/default/grey_email_icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 50%;
+    background-size: 20px;
+  }
+}
+
+.form-group-input {
+  input[type=email], input[type=password] {
+    border: unset;
+    padding: 12px 21px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 422px;
+    outline: none;
+    font-size: 19px;
+    &::placeholder {
+      font-size: 19px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .form-group-checkbox {
+    align-self: flex-start;
+  }
 }

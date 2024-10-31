@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <nav>
+    <img src="img/default/join_logo_blue_icon.png" />
+    <div class="sign-up-container">
+      <span>Not a Join user?</span>
+      <div class="blue-btn">Sign up</div>
+    </div>
+  </nav>
+  <div class="login-container">
+    <div class="login-content">
+      <h1>Log in</h1>
+      <form formGroup="loginForm">
+        <div class="loginForm">
+          <div class="form-group-input">
+            <input class="email-icon" type="email" formControlName="email" placeholder="Email" />
+          </div>
+          <div class="form-group-input">
+            <input
+              class="passowrd-icon"
+              type="password"
+              formControlName="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="form-group-checkbox">
+            <label>
+              <input type="checkbox" formControlName="rememberMe" />
+              Remember me
+            </label>
+          </div>
+          <div class="form-group-buttons">
+            <button type="submit" class="blue-btn" (click)="login()">
+              Log in
+            </button>
+            <button>Guest log in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer></footer>
+  </div>
+</div>
