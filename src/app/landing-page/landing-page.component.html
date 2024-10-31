@@ -12,7 +12,12 @@
       <form formGroup="loginForm">
         <div class="loginForm">
           <div class="form-group-input">
-            <input class="email-icon" type="email" formControlName="email" placeholder="Email" />
+            <input
+              class="email-icon"
+              type="email"
+              formControlName="email"
+              placeholder="Email"
+            />
           </div>
           <div class="form-group-input">
             <input
@@ -24,22 +29,53 @@
           </div>
           <div class="form-group-checkbox">
             <label>
-              <input class="custom-checkbox" type="checkbox" formControlName="rememberMe" />
+              <input
+                class="custom-checkbox"
+                type="checkbox"
+                formControlName="rememberMe"
+              />
               Remember me
             </label>
           </div>
           <div class="form-group-buttons">
-            <button type="submit" [disabled]="this.loginForm.invalid" class="blue-btn" (click)="login()">
+            <button
+              type="submit"
+              [disabled]="this.loginForm.invalid"
+              class="blue-btn"
+              (click)="login()"
+            >
               Log in
             </button>
-            <button routerLink="/dashboard/summary/" routerLinkActive="router-link-active"  class="white-btn-grey-font" type="button">Guest log in</button>
+            <button
+              routerLink="/dashboard/summary/"
+              routerLinkActive="router-link-active"
+              class="white-btn-grey-font"
+              type="button"
+            >
+              Guest log in
+            </button>
           </div>
         </div>
       </form>
     </div>
     <footer>
-      <span class="pointer" routerLink="/info/privacy-policy/" routerLinkActive="router-link-active" >Privacy Policy</span>
-      <span class="pointer" routerLink="/info/legal-notice/">Legal Notice</span>
+      <div class="sign-in-responsive">
+        <div class="sign-up-container-responsive">
+          <span>Not a Join user?</span>
+          <div class="blue-btn">Sign up</div>
+        </div>
+      </div>
+      <div class="info">
+        <span
+          class="pointer"
+          routerLink="/info/privacy-policy/"
+          routerLinkActive="router-link-active"
+          >Privacy Policy</span
+        >
+        <span class="pointer" routerLink="/info/legal-notice/"
+          >Legal Notice</span
+        >
+      </div>
     </footer>
   </div>
 </div>

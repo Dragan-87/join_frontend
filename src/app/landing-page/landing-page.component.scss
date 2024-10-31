@@ -12,11 +12,15 @@ nav {
   padding: 80px 67px;
 }
 
-.sign-up-container {
+.sign-up-container, .sign-up-container-responsive {
   @include d-flex($justify: flex-end, $align: center);
   gap: 35px;
   width: 100%;
   height: fit-content;
+}
+
+.sign-up-container-responsive {
+  display: none;
 }
 
 .blue-btn {
@@ -133,11 +137,20 @@ nav {
 }
 
 footer {
-  @include d-flex($justify: space-between, $align: center);
+  @include d-flex($justify: center, $align: center, $direction: column);
   gap: 20px;
+  padding: 10px 0;
   flex-grow: 2;
   justify-self: flex-end;
+}
+
+.info {
+  @include d-flex($justify: center, $align: center);
+  gap: 10px;
   > span {
+    font-size: 16px;
+    color: $gray-1;
+
     &:hover {
       color: $primary-color;
       transition: all 175ms ease-in-out;
@@ -146,5 +159,56 @@ footer {
     &:active {
       color: darken($color: $primary-color, $amount: 10%);
     }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  nav {
+    padding: 20px 0;
+  }
+
+  .login-content {
+    padding: 48px 20px;
+  }
+
+  .form-group-input {
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+    }
+  }
+
+  footer {
+    flex-grow: 0;
+    padding: 30px;
+  }
+
+  .sign-up-container {
+    display: none;
+  }
+
+  .sign-up-container-responsive {
+    display: flex;
+  }
+}
+
+@media (max-width: $smartphone-width) {
+  .login-content {
+    padding: 48px 10px;
+  }
+
+  .form-group-input {
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+    }
+  }
+
+  footer {
+    padding: 20px;
   }
 }
