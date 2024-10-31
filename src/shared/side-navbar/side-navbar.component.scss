@@ -47,10 +47,9 @@
     color: $white;
     background-color: $primary-color;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: all 175ms ease-in-out;
+    transition: background-color 175ms ease-in-out;
     > img {
       filter: invert(1) brightness(2);
-      transition: all 275ms ease-in-out;
     }
   }
 }
