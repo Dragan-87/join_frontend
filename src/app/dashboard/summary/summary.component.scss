@@ -28,9 +28,11 @@ h1 {
 .urgent {
   @include d-flex($justify: center, $align: center, $direction: row);
   gap: 35px;
-  padding: 28px 48px;
+  padding: 40px 48px;
   border-radius: 30px;
   background-color: $primary-color;
+  min-width: 672px;
+  min-height: 191px;
 }
 
 .divider {
@@ -54,6 +56,11 @@ h1 {
 }
 
 
+.task-in-board {
+  min-width: 208px !important;
+  min-height: 191px !important;
+}
+
 .icon-and-number {
   @include d-flex($justify: center, $align: center, $direction: row);
   gap: 20px;
@@ -73,6 +80,7 @@ h1 {
 .title {
   font-size: $font-size-lg;
   color: $white;
+  text-align: center;
 }
 
 .small-card {
@@ -80,7 +88,8 @@ h1 {
   padding: 40px;
   border-radius: 30px;
   background-color: $white;
-
+  width: 219px;
+  height: 204px;
 }
 
 
