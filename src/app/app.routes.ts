@@ -9,6 +9,7 @@ import { SummaryComponent } from './dashboard/summary/summary.component';
 import { PrivacyPolicyComponent } from '../shared/privacy-policy/privacy-policy.component';
 import { LegalNoticeComponent } from '../shared/legal-notice/legal-notice.component';
 import { DirectionsComponent } from '../shared/directions/directions.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -34,4 +35,7 @@ export const routes: Routes = [
       { path: 'directions', component: DirectionsComponent },
     ],
   },
+  {
+    path: 'sign-up', component: SignUpComponent
+  }
 ];

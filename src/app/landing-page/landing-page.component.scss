@@ -222,10 +222,10 @@ footer {
   .form-group-input {
     input[type="email"],
     input[type="password"] {
-      width: 100%;
+      width: calc(100vw - 42px);
     }
   }
-
+  
   .form-group-checkbox {
     padding-left: 20px;
   }
@@ -234,7 +234,7 @@ footer {
     flex-direction: column;
     gap: 16px;
     > button {
-      padding: 15px;
+      padding: 20px;
       width: 65%;
       font-size: 19px !important;
     }
@@ -251,5 +251,27 @@ footer {
 
   footer {
     padding: 20px;
+  }
+}
+
+
+@media screen and (max-width: 376px) {
+
+  nav {
+    img {
+      height: 50px;
+    }
+  }
+
+  .loginForm {
+    gap: 20px;
+  }
+  .login-content {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  footer {
+    gap: 10px;
   }
 }

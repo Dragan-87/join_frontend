@@ -1,3 +1,26 @@
 @import '../../../styles.scss';
 
 
+.summary-contaienr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+
+
+h1 {
+  font-size: 48px;
+  line-height: 57.6px;
+  text-align: center;
+  > span {
+    color: $primary-color;
+    font-size: 64px;
+    font-weight: 700;
+  }
+}
+
+.summary{
+  @include d-flex($justify: center, $align: center);
+  
+}
