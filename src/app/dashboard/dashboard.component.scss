@@ -1,11 +1,27 @@
 @import '../../styles.scss';
 
 
-
 .content-container {
   position: absolute;
   top: 103.59px;
   left: 232px;
   width: calc(100% - 232px);
   height: calc(100% - 103.59px);
+}
+
+@media screen and (max-width: $tablet-width) {
+  .responive-container {
+    height: 100svh;
+    @include d-flex($justify: unset, $align: unset, $direction: column);
+    > .content-container {
+      flex-grow: 1;
+    }
+  }
+
+  .content-container {
+    position: unset;
+    width: 100%;
+    height: 100%;
+
+  }
 }

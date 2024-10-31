@@ -1,7 +1,6 @@
 @import "../../styles.scss";
 
 .side-nav-container {
-  position: relative;
   @include d-flex($justify: space-between, $align: center, $direction: column);
   max-width: 232px;
   height: calc(100vh - 103.59px);
@@ -30,7 +29,7 @@
       color: darken($color: $primary-color, $amount: 10%);
       transition: all 175ms ease-in-out;
     }
-  };
+  }
 }
 
 .icon-container {
@@ -52,7 +51,41 @@
     > img {
       filter: invert(1) brightness(2);
       transition: all 275ms ease-in-out;
+    }
+  }
+}
 
+@media screen and (max-width: $tablet-width) {
+  .side-nav-container {
+    @include d-flex($justify: center, $align: center, $direction: row);
+    height: 76px;
+    padding: 16px 0;
+    max-width: unset;
+  }
+
+  .top-container {
+    @include d-flex($justify: center, $align: center, $direction: row);
+    width: 100%;
+    max-width: unset;
+  }
+
+  .bottem-container {
+    display: none;
+  }
+
+  .icon-container {
+    @include d-flex($justify: center, $align: center, $direction: column);
+    width: 76px;
+    height: 75px;
+    text-wrap: none;
+    padding: 4px;
+    > img {
+      width: 24px;
+      height: 24px;
+    }
+    > span {
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 }
