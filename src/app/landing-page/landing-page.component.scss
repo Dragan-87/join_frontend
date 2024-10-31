@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 .wrapper {
   @include d-flex($justify: unset, $align: center, $direction: column);
@@ -19,8 +19,12 @@ nav {
   height: fit-content;
 }
 
-.blue-btn{
-  @include button($bg-color: $primary-color, $hover-color: $primary-color, $font-color: $white);
+.blue-btn {
+  @include button(
+    $bg-color: $primary-color,
+    $hover-color: $primary-color,
+    $font-color: $white
+  );
 }
 
 .login-container {
@@ -37,7 +41,7 @@ nav {
   border-radius: 30px;
   > h1 {
     font-size: 48px;
-    line-height: 57,6px;
+    line-height: 57, 6px;
     border-bottom: 3px solid $primary-color;
   }
 }
@@ -49,8 +53,8 @@ nav {
 }
 
 .email-icon {
-  input[type=email] {
-    background-image: url('../../../public/img/default/grey_email_icon.png');
+  input[type="email"] {
+    background-image: url("../../../public/img/default/grey_email_icon.png");
     background-repeat: no-repeat;
     background-position: 10px 50%;
     background-size: 20px;
@@ -58,7 +62,8 @@ nav {
 }
 
 .form-group-input {
-  input[type=email], input[type=password] {
+  input[type="email"],
+  input[type="password"] {
     border: unset;
     padding: 12px 21px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -70,7 +75,24 @@ nav {
       color: rgba(0, 0, 0, 0.3);
     }
   }
-  .form-group-checkbox {
-    align-self: flex-start;
+}
+.form-group-checkbox {
+  align-self: flex-start;
+}
+
+.form-group-buttons {
+  @include d-flex($justify: space-evenly, $align: center);
+  width: 100%;
+  gap: 16px;
+  > button {
+    font-size: 23px !important;
   }
+}
+
+.white-btn-grey-font {
+  @include button(
+    $bg-color: $white,
+    $hover-color: $primary-color,
+    $font-color: $gray-1
+  );
 }
