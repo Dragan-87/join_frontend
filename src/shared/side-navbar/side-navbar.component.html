@@ -2,8 +2,8 @@
   <div class="top-container">
     <div
       (click)="this.isSummaryActive()"
-      routerLink="/dashboard/summary/"
-      routerLinkActive="router-link-active"
+      routerLink="/dashboard/summary"
+      [ngClass]="{'active-link': this.communicationService.summery}"
       class="icon-container pointer"
     >
       <img src="img/default/summary_icon.png" alt="" />
@@ -11,7 +11,8 @@
     </div>
     <div
       (click)="this.isAddTaskActive()"
-      routerLink="/dashboard/add-task/"
+      routerLink="/dashboard/add-task"
+      [ngClass]="{'active-link': this.communicationService.addTask}"
       class="icon-container pointer"
     >
       <img src="img/default/add_task_icon.png" alt="" />
@@ -19,7 +20,8 @@
     </div>
     <div
       (click)="this.isBoardActive()"
-      routerLink="/dashboard/board/"
+      routerLink="/dashboard/board"
+      [ngClass]="{'active-link': this.communicationService.board}"
       class="icon-container pointer"
     >
       <img src="img/default/board_icon.png" alt="" />
@@ -27,7 +29,8 @@
     </div>
     <div
       (click)="this.isContactsActive()"
-      routerLink="/dashboard/contacts/"
+      routerLink="/dashboard/contacts"
+      [ngClass]="{'active-link': this.communicationService.contacts}"
       class="icon-container pointer"
     >
       <img src="img/default/contacts_icon.png" alt="" />

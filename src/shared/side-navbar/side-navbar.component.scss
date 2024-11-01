@@ -32,6 +32,8 @@
   }
 }
 
+
+
 .icon-container {
   @include d-flex($justify: start, $align: start);
   gap: 8px;
@@ -86,5 +88,13 @@
       font-size: 15px;
       line-height: 18px;
     }
+  }
+}
+
+.active-link {
+  background-color: lighten($color: $primary-color, $amount: 20%) !important;
+  color: $white !important;
+  > img {
+    filter: invert(1) brightness(2);
   }
 }

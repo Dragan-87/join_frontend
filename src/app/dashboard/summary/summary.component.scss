@@ -25,16 +25,6 @@ h1 {
   gap: 10px;
 }
 
-.urgent {
-  @include d-flex($justify: center, $align: center, $direction: row);
-  gap: 35px;
-  padding: 40px 48px;
-  border-radius: 30px;
-  background-color: $primary-color;
-  min-width: 672px;
-  min-height: 191px;
-}
-
 .divider {
   height: 120px;
   border-left: 3px solid $white;
@@ -43,7 +33,6 @@ h1 {
 .deadline {
   @include d-flex($justify: flex-start, $align: flex-start, $direction: column);
   border-radius: 30px;
-  background-color: $primary-color;
   > .date {
     font-weight: $font-weight-bold;
     font-size: $font-size-xl;
@@ -54,7 +43,6 @@ h1 {
     color: $white;
   }
 }
-
 
 .task-in-board {
   min-width: 208px !important;
@@ -84,6 +72,7 @@ h1 {
 }
 
 .small-card {
+  @include d-flex($justify: center, $align: center, $direction: column);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 40px;
   border-radius: 30px;
@@ -92,4 +81,81 @@ h1 {
   height: 204px;
 }
 
+.card-hover-effect {
+  &:hover {
+    transform: scale(1.15);
+    border-top-left-radius: 0;
+    transition: transform 0.175s ease-in-out;
+  }
+}
 
+.task-to-do {
+  @include d-flex($justify: center, $align: center, $direction: column);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 30px;
+  width: 219px;
+  height: 204px;
+  background-color: lighten($color: $primary-color, $amount: 30%);
+}
+
+.dark-blue-hover {
+  &:hover {
+    > span {
+      color: $white !important;
+    }
+    > .icon-and-number {
+      > span {
+        color: $white !important;
+      }
+    }
+    background-color: darken($color: $primary-color, $amount: 20%);
+    transition: all 175ms ease-in-out;
+  }
+}
+
+.urgent {
+  @include d-flex($justify: center, $align: center, $direction: row);
+  gap: 35px;
+  padding: 40px 48px;
+  border-radius: 30px;
+  background-color: $primary-color;
+  min-width: 672px;
+  min-height: 191px;
+  > div {
+    > .icon-and-number {
+      &:hover {
+        > span {
+          color: black;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .summary-contaienr {
+    gap: 24px;
+    padding: 0 24px;
+  }
+  .urgent {
+    min-width: 100%;
+  }
+  .summary {
+    gap: 24px;
+  }
+  .small-card {
+    width: 100%;
+  }
+  .task-to-do {
+    width: 100%;
+  }
+
+  .card-none {
+    display: none;
+  }
+}
