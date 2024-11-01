@@ -12,6 +12,7 @@ h1 {
   font-size: 48px;
   line-height: 57.6px;
   text-align: center;
+
   > span {
     color: $primary-color;
     font-size: 64px;
@@ -115,47 +116,93 @@ h1 {
 }
 
 .urgent {
-  @include d-flex($justify: center, $align: center, $direction: row);
-  gap: 35px;
+  @include d-flex($justify: space-evenly, $align: center, $direction: row);
   padding: 40px 48px;
   border-radius: 30px;
   background-color: $primary-color;
-  min-width: 672px;
+  width: 672px;
+  min-width: 300px;
   min-height: 191px;
-  > div {
-    > .icon-and-number {
-      &:hover {
-        > span {
-          color: black;
-        }
-      }
-    }
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 1;
 
   &:hover {
     background-color: $white;
+    span {
+      color: $primary-color;
+    }
+    .divider {
+      border: 1px solid $primary-color;
+    }
   }
 }
 
+.responsive-card {
+  display: none;
+}
+
 @media screen and (max-width: $tablet-width) {
-  .summary-contaienr {
-    gap: 24px;
-    padding: 0 24px;
+  .summary-setup {
+    margin: 0;
   }
-  .urgent {
-    min-width: 100%;
-  }
+
   .summary {
     gap: 24px;
+    opacity: 0;
+    animation: slideIn 2s 1s forwards;
+  }
+
+  .urgent,
+  .task-to-do {
+    width: calc(100% - 40px);
   }
   .small-card {
-    width: 100%;
-  }
-  .task-to-do {
-    width: 100%;
+    width: calc(48% - 24px);
   }
 
   .card-none {
     display: none;
+  }
+
+  .responsive-card {
+    display: flex;
+  }
+
+  .greetings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideUp 2s forwards;
+  }
+
+  .card-hover-effect {
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      top: 50%;
+      opacity: 1;
+    }
+    100% {
+      top: 0%;
+      opacity: 0;
+    }
+  }
+}
+
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

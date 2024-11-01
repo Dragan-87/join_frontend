@@ -1,6 +1,6 @@
 <div class="summary-contaienr">
   <div class="greetings">
-    <h1>{{ this.greetings() }}, <span>"Name here"</span></h1>
+    <h1>{{ this.greetings() }} <span class="card-none">, "Name here"</span></h1>
   </div>
   <div class="summary">
     <div class="urgent card-hover-effect pointer">
@@ -34,6 +34,17 @@
       </div>
       <span class="title font-color-primary">Tasks To Do</span>
     </div>
+    <!-- responsive card shows only at tablet or smaller -->
+    <div
+      class="task-in-board small-card card-hover-effect dark-blue-hover pointer responsive-card"
+    >
+      <div class="icon-and-number">
+        <img src="img/summary/summary_default_icon.png" alt="" />
+        <span>0</span>
+      </div>
+      <span class="title font-color-primary">Tasks in Board</span>
+    </div>
+    <!-- responsive card end -->
     <div
       class="task-in-progress small-card card-hover-effect dark-blue-hover pointer"
     >
@@ -43,6 +54,7 @@
       </div>
       <span class="title font-color-primary">Tasks In Progress</span>
     </div>
+
     <div
       class="awaiting-feedback small-card card-hover-effect dark-blue-hover pointer"
     >
